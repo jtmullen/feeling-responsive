@@ -1,44 +1,20 @@
-- name: GitHub
-  url: http://github.com/phlow
-  class: icon-github
-  title: Code und mehr...
-
 - name: YouTube
-  url: http://www.youtube.com/PhlowMedia
+  url: https://www.youtube.com/channel/UCxqyDa-EgtE6HImEa0aJO9w
   class: icon-youtube
-  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
+  title: "American Solar Challenge on Youtube"
 
 - name: Twitter
-  url: http://twitter.com/phlow
+  url: https://twitter.com/ASC_SolarRacing
   class: icon-twitter
-  title: "Immer das Neuste von Phlow gibt es auf Twitter"
+  title: "American Solar Challenge on Twitter"
 
-- name: Mixcloud
-  url: http://www.mixcloud.com/phlow/
-  class: icon-cloud
-  title: "Mixe, was sonst?"
+- name: Facebook
+  url: https://www.facebook.com/AmericanSolarChallenge
+  class: icon-facebook
+  title: "American Solar Challenge on Facebook"
 
-# - name: Facebook
-#   url: http://www.facebook.com/
-#   class: icon-facebook
-#   title: ""
+- name: Flickr
+  url: https://www.flickr.com/photos/americansolarchallenge/
+  class: icon-camera
+  title: "American Solar Challenge on Flickr"
 
-# - name: Soundcloud
-#   url: http://soundcloud.com/
-#   class: icon-soundcloud
-#   title: ""
-
-# - name: Instagram
-#   url: http://instagram.com/
-#   class: icon-instagram
-#   title: ""
-
-# - name: Pinterest
-#   url: http://www.pinterest.com/
-#   class: icon-pinterest
-#   title: ""
-
-# - name: Xing
-#   url: https://www.xing.com/profile/
-#   class: icon-xing
-#   title: Xing Profil
