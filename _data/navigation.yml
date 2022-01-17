@@ -12,23 +12,34 @@
 - title: "Event"
   url: "/design/"
   side: left
+  dropdown:
+  - title: "Previous Events"
+    url: "/roadmap/"
 
 - title: "Teams"
   url: "/headers/"
   side: left
+  dropdown:
+  - title: "Previous Teams"
+    url: "/roadmap/"
 
 - title: "Regulations"
   url: "/documentation/"
   side: left
   dropdown:
-  - title: "Changelog"
-    url: "/changelog/"
   - title: "Roadmap"
     url: "/roadmap/"
+  - title: "Previous Regs"
+    url: "/changelog/"
 
-- title: "Sponsorship"
-  url: "/headers/"
+- title: "Sponsors"
+  url: "/sponsors/"
   side: left
+  dropdown:
+  - title: "Become A Sponsor"
+    url: "/sponsorship-info/"
+  - title: "Past Sponsors"
+    url: "/changelog/"
 
 - title: "Get Involved"
   url: "/get-involved/"
@@ -40,6 +51,9 @@
     url: "/get-involved/volunteer"
 
 - title: "About"
-  url: "/contact/"
+  url: "/about/"
   side: right
+  dropdown:
+  - title: "Contact"
+    url: "/contact/"
 
