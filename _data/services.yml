@@ -8,7 +8,7 @@
   url: "/media/"
   title: "Media"
 
-- name: "RSS"
+- name: "RSS News Feed"
   url: "/feed.xml"
   title: "Subscribe to RSS Feed"
 
