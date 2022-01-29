@@ -8,11 +8,11 @@
   url: "/media/"
   title: "Media"
 
-- name: "RSS Feed"
+- name: "RSS News Feed"
   url: "/feed.xml"
   title: "Subscribe to ASC News via RSS"
   
-- name: "Atom Feed"
+- name: "Atom News Feed"
   url: "/atom.xml"
   title: "Subscribe to ASC News via Atom"
 
