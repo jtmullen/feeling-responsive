@@ -5,4 +5,4 @@ title: "Search"
 sitemap: false
 ---
 
-{% include _google_search.html %}
+{% include team-status year="2022" type="technical" %}

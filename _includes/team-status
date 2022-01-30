@@ -1,0 +1,52 @@
+{% comment %}
+*
+*   Required Parameters
+*
+*    › year  (must match folder year in _data->events)
+*    › type  (i.e. registration or technical. Must match name of file in technical)
+*
+*   Example: {% include team-status year='2022' type='technical' %}
+*
+*
+*
+*
+{% endcomment %}
+
+
+
+{% assign year = include.year %}
+{% assign file = include.type %}
+<table>
+  {% if year == NULL or file == NULL %}
+    <tr>Invalid Team Status Requested</tr>
+
+  {% else %}
+    {% assign cols =  {{ site.data.events.[year].[file][0] | size }} %}
+	{% assign items =  {{ cols | minus: 3 }} %}
+	{% assign start = {{cols | minus: items}} %}
+    <tr>
+      <th>TEAM</th>
+	  <th>CLASS</th>
+	  {% for num in site.data.events.[year].[file][0] offset:3 %}
+		<th>{{ num[0] }}</th>
+	  {% endfor %}
+	</tr>
+	{% for team in site.data.events.[year].[file] %}
+	{% for row in site.data.teams %}
+	  {% if row.team == team.team %}
+		{% assign team_data = row %}
+		{% break %}
+	  {% endif %}
+	{% endfor %}
+	<tr>
+	  <td><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
+	  <td>{{ team.class }}</td>
+	  {% for i in (4..12) %}
+	    {% assign key = forloop.index %}
+		<td>.{{ team.1 }}</td>
+	  {% endfor %}
+    </tr>
+	{% endfor %}
+  {% endif %}
+</table>
+

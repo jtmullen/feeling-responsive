@@ -1,0 +1,18 @@
+{% comment %}
+*
+*   Required Parameters
+*
+*    › name    (team name to find)
+*
+*   Example: {% include team-data name="Illinois" %}
+*
+*
+*
+*
+{% endcomment %}
+{% for row in site.data.teams %}
+  {% if row.team == include.name %}
+    {{ row }}
+	{% break %}
+  {% endif %}
+{% endfor %}
