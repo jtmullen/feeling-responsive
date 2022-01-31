@@ -32,6 +32,15 @@
 	  border-left: solid 1px #cdd0d4;">{{ num[0] }}</th>
 	  {% endfor %}
 	</tr>
+	{% for data_row in site.data.events.[year].[file] %}
+		{% if data_row.team == "title" %}
+			{% assign tooltips = "" | split: ',' %}
+			{% for column in data_row offset:3 %}
+				{% assign tooltips = tooltips | push: column[1] %}
+			{% endfor %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
 	{% for team in site.data.events.[year].[file] %}
 	{% if team.team != "modified" and team.team != "title" %}
 		{% for row in site.data.teams %}
@@ -44,25 +53,25 @@
 		  <td><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
 		  <td>{{ team.class }}</td>
 		  {% for item in team offset:3 %}
+			{% assign cellColor = "#ffffff" %}
 			{% if item[1] contains "G" %}
-				<td bgcolor="LimeGreen" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+				{% assign cellColor = "#32cd32" %}
 			{% elsif item[1] contains "Y" %}
-				<td bgcolor="yellow" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+				{% assign cellColor = "#ffff00" %}
 			{% elsif item[1] contains "B" %}
-				<td bgcolor="RoyalBlue" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+				{% assign cellColor = "#4169e1" %}
 			{% elsif item[1] contains "R" %}
-				<td bgcolor="Tomato" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+				{% assign cellColor = "#ff6347" %}
 			{% elsif item[1] contains "N/A" %}
-				<td bgcolor="grey" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+				{% assign cellColor = "#808080" %}
+			{% endif %}
+			{% if tooltips %}
+							<td bgcolor="{{cellColor}}" title="{{tooltips[forloop.index0]}}" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
 			{% else %}
-				<td bgcolor="white" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
-			{% endif %}		
+							<td bgcolor="{{cellColor}}" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
+			{% endif %}
 		  {% endfor %}
 		</tr>
 	{% else %}
