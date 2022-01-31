@@ -5,16 +5,12 @@ title: "2022 Team Status"
 ---
 <style>table {
     width:100%;
-}
-body
-{
-  overflow-x:hidden;
 }</style>
 
 ## Registration Documents
 
 The list of documents below are required in order to register for the event. Use this status board to track progress towards registration. The vehicle design reports have their own dedicated status board below with sub category breakdowns for more detailed submission status. All finished solar cars will be required to undergo a full inspection during Scrutineering prior to competing.
-
+<div style="overflow-x: scroll;">
 | #  | Item                         | Reg   | Due Date          | Submit To                                                                         |
 |----|------------------------------|-------|-------------------|-----------------------------------------------------------------------------------|
 | 1  | Team Entry Form              | 4.1.A | November 15, 2020 | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
@@ -29,14 +25,14 @@ The list of documents below are required in order to register for the event. Use
 | 10 | Engineering Build Review     | 5.4   | June 27, 2021     | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
 | 11 | Individual Participant Forms |       | At Event          | Event HQ (On Site)                                                                |
 | 12 | Emergency Information Form   |       | At Event          | Event HQ (On Site)                                                                |
-
+</div>
 {% include team-status year="2022" type="registration" %}
 \* Proof of Insuance Renewal Required Prior to Event
 
 --------
 
 ## Technical Documents
-
+<div style="overflow-x: scroll;">
 | # | Item                            | Reg   | Due Date          | Submit To                                                                         |
 |---|---------------------------------|-------|-------------------|-----------------------------------------------------------------------------------|
 | 1 | PVDR - Mechanical               | 5.1   | November 15, 2020 | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
@@ -47,5 +43,5 @@ The list of documents below are required in order to register for the event. Use
 | 6 | VDR - Battery Report            | 5.2.D | January 15, 2021  | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
 | 7 | VDR - Battery Protection Report | 5.2.E | January 15, 2021  | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
 | 8 | VDR - Solar Cell Report         | 5.2.F | January 15, 2021  | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
-
+</div>
 {% include team-status year="2022" type="technical" %}
