@@ -3,8 +3,15 @@ permalink: /2022/teams/
 layout: page-fullwidth
 title: "2022 Team Status"
 ---
+<style>table {
+    width:100%;
+}
+body
+{
+  overflow-x:hidden;
+}</style>
 
-# Registration Documents
+## Registration Documents
 
 The list of documents below are required in order to register for the event. Use this status board to track progress towards registration. The vehicle design reports have their own dedicated status board below with sub category breakdowns for more detailed submission status. All finished solar cars will be required to undergo a full inspection during Scrutineering prior to competing.
 
@@ -28,7 +35,7 @@ The list of documents below are required in order to register for the event. Use
 
 --------
 
-# Technical Documents
+## Technical Documents
 
 | # | Item                            | Reg   | Due Date          | Submit To                                                                         |
 |---|---------------------------------|-------|-------------------|-----------------------------------------------------------------------------------|
