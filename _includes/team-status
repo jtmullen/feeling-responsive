@@ -16,7 +16,7 @@
 
 {% assign year = include.year %}
 {% assign file = include.type %}
-<table>
+<table style="width:100%">
   {% if year == NULL or file == NULL %}
     <tr>Invalid Team Status Requested</tr>
 
@@ -28,25 +28,49 @@
       <th>TEAM</th>
 	  <th>CLASS</th>
 	  {% for num in site.data.events.[year].[file][0] offset:3 %}
-		<th>{{ num[0] }}</th>
+		<th style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ num[0] }}</th>
 	  {% endfor %}
 	</tr>
 	{% for team in site.data.events.[year].[file] %}
-	{% for row in site.data.teams %}
-	  {% if row.team == team.team %}
-		{% assign team_data = row %}
-		{% break %}
-	  {% endif %}
-	{% endfor %}
-	<tr>
-	  <td><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
-	  <td>{{ team.class }}</td>
-	  {% for i in (4..12) %}
-	    {% assign key = forloop.index %}
-		<td>.{{ team.1 }}</td>
-	  {% endfor %}
-    </tr>
+	{% if team.team != "modified" and team.team != "title" %}
+		{% for row in site.data.teams %}
+		  {% if row.team == team.team %}
+			{% assign team_data = row %}
+			{% break %}
+		  {% endif %}
+		{% endfor %}
+		<tr style="border-bottom: 1px solid #cdd0d4;">
+		  <td><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
+		  <td>{{ team.class }}</td>
+		  {% for item in team offset:3 %}
+			{% if item[1] contains "G" %}
+				<td bgcolor="LimeGreen" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% elsif item[1] contains "Y" %}
+				<td bgcolor="yellow" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% elsif item[1] contains "B" %}
+				<td bgcolor="RoyalBlue" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% elsif item[1] contains "R" %}
+				<td bgcolor="Tomato" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% elsif item[1] contains "N/A" %}
+				<td bgcolor="grey" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% else %}
+				<td bgcolor="white" style="text-align: center; border-right: solid 1px #cdd0d4; 
+	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>
+			{% endif %}		
+		  {% endfor %}
+		</tr>
+	{% else %}
+		{% assign last_mod = team.number %}
+	{% endif %}
 	{% endfor %}
   {% endif %}
 </table>
+<b>Last Updated:</b> {{last_mod}}
+
 

@@ -3,7 +3,7 @@ layout: page
 title: "About"
 permalink: "/about/"
 header:
-    image_fullwidth: "header_drop.jpg"
+    image_fullwidth: "Brizo-Header.png"
 ---
 
 The Innovators Educational Foundation (IEF) is the non-profit organization behind collegiate level solar car racing in North America. These solar car competitions have been occurring since the 1990 GM Sunrayce USA. In recent years, IEF has been organizing and hosting two unique solar racing events.
