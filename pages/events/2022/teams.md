@@ -3,9 +3,6 @@ permalink: /2022/teams/
 layout: page-fullwidth
 title: "2022 Team Status"
 ---
-<style>table {
-    width:100%;
-}</style>
 
 # Registration Documents
 
