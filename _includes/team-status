@@ -66,11 +66,9 @@
 				{% assign cellColor = "#808080" %}
 			{% endif %}
 			{% if tooltips %}
-							<td bgcolor="{{cellColor}}" title="{{tooltips[forloop.index0]}}" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
+							<td bgcolor="{{cellColor}}" title="{{tooltips[forloop.index0]}}" style="text-align: center; border-right: solid 1px #cdd0d4; border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
 			{% else %}
-							<td bgcolor="{{cellColor}}" style="text-align: center; border-right: solid 1px #cdd0d4; 
-	  border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
+							<td bgcolor="{{cellColor}}" style="text-align: center; border-right: solid 1px #cdd0d4; border-left: solid 1px #cdd0d4;">{{ item[1] }}</td>	
 			{% endif %}
 		  {% endfor %}
 		</tr>
