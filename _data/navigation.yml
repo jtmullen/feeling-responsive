@@ -17,7 +17,7 @@
     url: "/roadmap/"
 
 - title: "Teams"
-  url: "/events/2022/Teams"
+  url: "/events/2022/teams"
   side: left
   dropdown:
   - title: "All Time Teams"
@@ -33,7 +33,7 @@
     url: "/changelog/"
 
 - title: "Sponsors"
-  url: "/sponsors/"
+  url: "/events/2022/sponsors"
   side: left
   dropdown:
   - title: "Become A Sponsor"
