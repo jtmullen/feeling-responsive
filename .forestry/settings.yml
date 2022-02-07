@@ -5,11 +5,17 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _data/events
+  label: Events
+  create: all
+  match: "**/*"
+  new_doc_ext: ".csv"
+- type: directory
   path: _data
   label: Dara
   create: all
   match: "**/*"
-  new_doc_ext: ".yml"
+  new_doc_ext: yml
 - type: jekyll-posts
   label: Posts
   create: all
