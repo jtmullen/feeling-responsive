@@ -1,0 +1,27 @@
+{% comment %}
+*
+*   Required Parameters
+*
+*    › year  (must match folder year in _data->events)
+*    › team  (name of team)
+*
+*   Example: {% include check-team-year year='2022' team='Minnesota' %}
+*
+*   Note: only checks "registration" csv
+*
+*
+{% endcomment %}
+{% assign year = include.year %}
+{% assign team_name = include.team %}
+{% if year == NULL or team_name == NULL %}
+Unknown
+{% else %}
+{% assign number = "Unknown" %}
+{% for team in site.data.events.[year].registration %}
+ {% if team.team == team_name %}
+	{% assign number = {{team.number}} %}
+ {% break %}
+ {% endif %}
+{% endfor %}
+{{number}}
+{% endif %}

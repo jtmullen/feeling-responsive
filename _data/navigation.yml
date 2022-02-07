@@ -20,8 +20,8 @@
   url: "/headers/"
   side: left
   dropdown:
-  - title: "Previous Teams"
-    url: "/roadmap/"
+  - title: "All Time Teams"
+    url: "/all-time-teams/"
 
 - title: "Regulations"
   url: "/documentation/"

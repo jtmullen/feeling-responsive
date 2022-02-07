@@ -1,0 +1,77 @@
+{% comment %}
+*
+*   No Parameters
+*
+*   Example: {% include all-teams %}
+*
+*
+*
+*
+{% endcomment %}
+{% assign event_years = "" | split:',' %}
+{% for year in site.data.events %}
+	{% assign event_years = event_years | push: year[0] %}
+{% endfor %}
+{% assign event_years = event_years | reverse %}
+{% assign number_array = "" | split:',' %}
+{% assign all_teams_array = "" | split: ',' %}
+{% for team in site.data.teams %}
+	{% assign team_string = team.full_name %}
+	{% assign team_string = team_string | append: "~" %}
+	{% assign team_string = team_string | append: team.website %}
+	{% assign team_string = team_string | append: "~" %}
+	{% assign team_string = team_string | append: team.country %}
+	{% assign team_string = team_string | append: "~" %}
+	{% assign team_string = team_string | append: team.institution %}
+	{% assign team_string = team_string | append: "~" %}
+	{% assign team_string = team_string | append: team.institution_website %}
+	{% assign team_string = team_string | append: "~" %}
+	{% for year in event_years %}
+		{% capture number %}{% include check-team-year year=year team=team.team %}{% endcapture %}
+		{% if number contains "Unknown" %}
+		{% else %}
+			{% assign number = number | newline_to_br | strip_newlines | replace: '<br />', ' ' | strip_html | strip %}
+			{% assign team_string = team_string | append: year %}
+			{% assign team_string = team_string | append: "~" %}
+			{% assign int_num = number | plus: 0 %}
+			{% assign team_string = team_string | append: int_num %}
+			{% assign number_array = number_array | push: int_num %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	{% assign all_teams_array = all_teams_array | push: team_string %}
+{% endfor %}
+{% assign number_array = number_array | sort %}
+<table style="width:100%">
+    {% assign cols =  {{ site.data.events.[year].[file][0] | size }} %}
+	{% assign items =  {{ cols | minus: 3 }} %}
+	{% assign start = {{cols | minus: items}} %}
+    <tr>
+      <th>#</th>
+	  <th>Team Name</th>
+	  <th>Institution</th>
+	  <th>Country</th>
+	  <th>Last Event</th>
+	</tr>
+	{% assign last_num = -1 %}
+	{% for number in number_array %}
+		{% if number != last_num %}
+		{% for team_str in all_teams_array %}
+		{% assign team = team_str | split: "~" %}
+			{% assign team_num = team[6] | plus: 0 %}
+			{% if number == team_num %}
+			<tr>
+				<td>{{team[6]}}</td>
+				<td><a href="{{team[1]}}">{{team[0]}}</a></td>
+				<td><a href="{{team[4]}}">{{team[3]}}</a></td>
+				<td>{{team[2]}}</td>
+				<td>{{team[5]}}</td>
+			</tr>
+			{% endif %}
+		{% endfor %}
+		{% endif %}
+		{% assign last_num = number %}
+	{% endfor %}	
+</table>
+
+

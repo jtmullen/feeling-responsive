@@ -52,7 +52,7 @@
 		  {% endif %}
 		{% endfor %}
 		<tr style="border-bottom: 1px solid #cdd0d4;">
-		  <td><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
+		  <td style="white-space:nowrap;"><a href="{{team_data.website}}">{{team.number}} - {{team.team}}</a></td>
 		  <td>{{ team.class }}</td>
 		  {% for item in team offset:3 %}
 			{% assign cellColor = "#ffffff" %}
