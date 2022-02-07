@@ -12,7 +12,6 @@ title: "2022 Team Status"
 
 The list of documents below are required in order to register for the event. Use this status board to track progress towards registration. The vehicle design reports have their own dedicated status board below with sub category breakdowns for more detailed submission status. All finished solar cars will be required to undergo a full inspection during Scrutineering prior to competing.
 
-<span style=" width:100%;">
 
 | #  | Item                         | Reg   | Due Date          | Submit To                                                                         |
 |----|------------------------------|-------|-------------------|-----------------------------------------------------------------------------------|
@@ -29,7 +28,6 @@ The list of documents below are required in order to register for the event. Use
 | 11 | Individual Participant Forms |       | At Event          | Event HQ (On Site)                                                                |
 | 12 | Emergency Information Form   |       | At Event          | Event HQ (On Site)                                                                |
 
-</span>
 
 {% include team-status year="2022" type="registration" %}
 \* Proof of Insuance Renewal Required Prior to Event
@@ -38,7 +36,6 @@ The list of documents below are required in order to register for the event. Use
 
 ## Technical Documents
 
-<span style=" width:100%;">
 
 | # | Item                            | Reg   | Due Date          | Submit To                                                                         |
 |---|---------------------------------|-------|-------------------|-----------------------------------------------------------------------------------|
@@ -51,6 +48,5 @@ The list of documents below are required in order to register for the event. Use
 | 7 | VDR - Battery Protection Report | 5.2.E | January 15, 2021  | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
 | 8 | VDR - Solar Cell Report         | 5.2.F | January 15, 2021  | [ascteams@americansolarchallenge.org](mailto:ascteams@americansolarchallenge.org) |
 
-</span>
 
 {% include team-status year="2022" type="technical" %}

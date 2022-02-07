@@ -17,7 +17,7 @@
     url: "/roadmap/"
 
 - title: "Teams"
-  url: "/headers/"
+  url: "/2022/Teams"
   side: left
   dropdown:
   - title: "Previous Teams"
