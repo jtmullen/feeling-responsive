@@ -52,14 +52,22 @@ format: post
 
 	{% if page.sidebar == "left" %}
 	<div class="medium-4 columns medium-pull-8">
+		{% if page.sidebar_name %}
+		{% include sidebars/{{page.sidebar_name}} %}
+		{% else %}
 		{% include _sidebar.html %}
+		{% endif %}
 	</div><!-- /.medium-4.columns -->
 	{% endif %}
 
 
 	{% if page.sidebar == "right" %}
 	<div class="medium-4 columns">
+		{% if page.sidebar_name %}
+		{% include sidebars/{{page.sidebar_name}} %}
+		{% else %}
 		{% include _sidebar.html %}
+		{% endif %}
 	</div><!-- /.medium-4.columns -->
 	{% endif %}
 </div><!-- /.row -->

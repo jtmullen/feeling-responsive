@@ -1,7 +1,10 @@
 ---
-permalink: /2022/teams/
+permalink: /events/2022/teams/
 layout: page-fullwidth
 title: "2022 Team Status"
+breadcrumb: true
+header:
+   image_fullwidth: header_unsplash_8.jpg
 ---
 <style>table {
     width:100%;

@@ -10,14 +10,14 @@
     url: "/news/archive/"
 
 - title: "Event"
-  url: "/design/"
+  url: "/events/2022/"
   side: left
   dropdown:
   - title: "Previous Events"
     url: "/roadmap/"
 
 - title: "Teams"
-  url: "/2022/Teams"
+  url: "/events/2022/Teams"
   side: left
   dropdown:
   - title: "All Time Teams"
