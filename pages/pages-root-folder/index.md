@@ -6,7 +6,8 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: Header.png
+  image_fullwidth: random
+  title: "American Solar Challenge"
 widget1:
   title: "American Solar Challenge"
   url: 'https://www.americansolarchallenge.org/about/american-solar-challenge/'

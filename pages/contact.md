@@ -1,5 +1,7 @@
 ---
 layout              : page
+header				: 
+	image			: Header.png
 title               : "Contact"
 meta_title          : "Contact and use our contact form"
 subheadline         : "Contact Form"

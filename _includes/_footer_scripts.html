@@ -9,9 +9,27 @@ $('audio,video').mediaelementplayer();
 
 
 {% if page.header.image_fullwidth %}
+{% if page.header.image_fullwidth == "random" %}
+	{% assign header_images = "" | split: ',' %}
+	{% for image in site.static_files %}
+		{% if image.path contains 'assets/img/headers' %}
+			{% assign header_images = header_images | push: image.path %}
+		{% endif %}
+	{% endfor %}
 <script>
-    $("#masthead").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
-    $("#masthead-with-text").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
+	var header_images = [
+		{% for image in header_images %}
+			"{{ site.baseurl }}{{ image }}",
+		{% endfor %}
+	];
+	var randomIndex = Math.floor(Math.random() * header_images.length);
+	var header_image = header_images[randomIndex];
+{% else %}
+<script>
+	var header_image = "{{ site.urlimg }}{{ page.header.image_fullwidth }}";
+{% endif %}
+    $("#masthead").backstretch(header_image, {fade: 700});
+    $("#masthead-with-text").backstretch(header_image, {fade: 700});
 </script>
 {% endif %}
 
