@@ -4,7 +4,7 @@ layout: page-fullwidth
 title: "2022 Team Status"
 breadcrumb: true
 header:
-   image_fullwidth: header_unsplash_8.jpg
+   image_fullwidth: "one-off-headers/zephyr-heartland.jpg"
 ---
 <style>table {
     width:100%;

@@ -12,10 +12,12 @@ widget1:
   title: "American Solar Challenge"
   url: 'https://www.americansolarchallenge.org/about/american-solar-challenge/'
   text: 'The American Solar Challenge is a competition to design, build, and drive solar-powered cars in a cross-country time/distance rally event. Teams compete over a 1,500-2,000 mile course between multiple cities across the country. The event has had over two decades of organized events in North America.'
+  image: Logo.png
 widget2:
   title: "Formula Sun Grand Prix"
   url: 'https://www.americansolarchallenge.org/about/formula-sun-grand-prix/'
   text: 'The Formula Sun Grand Prix is a track event that is held on grand prix or road style closed courses. This unique style of competition truly test the limits of solar cars in handling curves, braking, and acceleration. Strategy applied during these three day events is different than what is applied on the cross-country event.'
+  image: "FSGP Color Logo.svg"
 widget3:
   title: "Support Our Events"
   url: 'https://www.paypal.com/donate?token=xVdCIZtRKnp_7iQF_5kteSTG6eqoNyW57mhHZMOWSvTc-jDskHuKvODuim7PuDrrMO3AKUkAXMwLDO9w'

@@ -28,6 +28,7 @@ permalink: "news/tags"
 		<li> <a href="#{{ tag }}">{{ tag }}</a>
 		{% endfor %}
 		</ul>
+		<hr>
 		{% for tag in tags %}
 		<h2 id="{{ tag }}">{{ tag }}</h2>
 		{% include list-posts tag='header' %}

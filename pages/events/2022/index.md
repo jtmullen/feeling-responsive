@@ -5,7 +5,7 @@ sidebar_name		: _asc2022.html
 title               : "2022 American Solar Challenge"
 teaser              : "Get ready for 16 days of events in July 2022!"
 header:
-   image_fullwidth  : "header_roadmap_3.jpg"
+   image_fullwidth  : "one-off-headers/independence-square-2021.jpg"
 permalink           : "/events/2022/"
 breadcrumb			: true
 ---
