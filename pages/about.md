@@ -3,7 +3,7 @@ layout: page
 title: "About"
 permalink: "/about/"
 header:
-    image: "Brizo-Header.png"
+    image: "Header.jpg"
     background-color: "#ffffff"
 ---
 
