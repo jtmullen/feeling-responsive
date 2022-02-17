@@ -34,7 +34,7 @@ widget3:
 # To change colors see sass/_01_settings_colors.scss
 #
 callforaction:
-  url: https://www.americansolarchallenge.org/the-competition/2022-american-solar-challenge/
+  url: https://jtmullen.github.io/feeling-responsive/events/2022/
   text: Register for the 2022 American Solar Challenge! ›
   style: alert
 permalink: /index.html
