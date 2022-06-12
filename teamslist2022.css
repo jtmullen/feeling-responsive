@@ -1,6 +1,16 @@
 table td {
-  border: 0;
+  border: none;
   padding: 0 10px;
+  text-decoration: none;
+}
+
+table {
+  border: none;
+  -webkit-backface-visibility: hidden;
+}
+
+a:link {
+  text-decoration: none!important;
 }
 
 .container {
@@ -65,6 +75,8 @@ table td {
 }
 .card .card-summary {
   padding: 5% 5% 3% 5%;
+  text-decoration: none;
+  background-color: white;
 }
 .card .card-summary b {
   font-size: 25px;
@@ -104,6 +116,7 @@ table td {
 .card .card-meta {
   max-height: 0;
   overflow: hidden;
+  background-color: white;
   color: #666;
   font-size: .78em;
   text-transform: uppercase;
